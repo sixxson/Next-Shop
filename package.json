@@ -11,6 +11,7 @@
   "dependencies": {
     "daisy": "^0.2.0",
     "daisyui": "^4.10.5",
+    "lucide-react": "^0.378.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"

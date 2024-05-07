@@ -5,7 +5,11 @@ const data = {
       name: "Nike Air Max 90",
       slug: "nike-air-max-90",
       image: "/images/nike-air-max-90.jpg",
-      banner: "/images/nike-air-max-90-banner.jpg",
+      banner: {
+        banner_1: "/images/nike-air-max-90-banner-1.jpg",
+        banner_2: "/images/nike-air-max-90-banner-2.jpg",
+        banner_3: "/images/nike-air-max-90-banner-3.jpg",
+      },
       price: 120,
       brand: "Nike",
       description:
@@ -20,7 +24,11 @@ const data = {
       name: "Adidas Superstar",
       slug: "adidas-superstar",
       image: "/images/adidas-superstar.jpg",
-      banner: "/images/adidas-superstar-banner.jpg",
+      banner: {
+        banner_1: "/images/nike-air-max-90-banner-1.jpg",
+        banner_2: "/images/nike-air-max-90-banner-2.jpg",
+        banner_3: "/images/nike-air-max-90-banner-3.jpg",
+      },
       price: 100,
       brand: "Adidas",
       description:
@@ -35,7 +43,11 @@ const data = {
       name: "Converse Chuck Taylor All Star",
       slug: "converse-chuck-taylor-all-star",
       image: "/images/converse-chuck-taylor-all-star.jpg",
-      banner: "/images/converse-chuck-taylor-all-star-banner.jpg",
+      banner: {
+        banner_1: "/images/nike-air-max-90-banner-1.jpg",
+        banner_2: "/images/nike-air-max-90-banner-2.jpg",
+        banner_3: "/images/nike-air-max-90-banner-3.jpg",
+      },
       price: 60,
       brand: "Converse",
       description:

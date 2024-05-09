@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Menu from './Menu'
+
 export default function Header() {
     return (
         <div>
@@ -26,14 +28,7 @@ export default function Header() {
                         <Link className="mt-3 text-base-content hover:underline sm:mx-3 sm:mt-0" href="#">About</Link>
                     </div>
                 </ul>
-                <ul className='flex-2'>
-                    <li>
-                        <Link href='' className=' btn btn-ghost rounded-btn '> Crat</Link>
-                    </li>
-                    <li>
-                        <Link href='' className=' btn btn-ghost rounded-btn '> Sign in</Link>
-                    </li>
-                </ul>
+                <Menu />
             </nav>
         </div>
     )

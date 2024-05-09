@@ -42,7 +42,7 @@ const data = {
       _id: 3,
       name: "Converse Chuck Taylor All Star",
       slug: "converse-chuck-taylor-all-star",
-      image: "/images/converse-chuck-taylor-all-star.jpg",
+      image: "/images/converse-chuck-taylor-all-star-1.jpg",
       banner: {
         banner_1: "/images/nike-air-max-90-banner-1.jpg",
         banner_2: "/images/nike-air-max-90-banner-2.jpg",
@@ -57,6 +57,44 @@ const data = {
       numReviews: 8,
       inStock: 10,
     },
+    {
+      _id: 4,
+      name: "Vans Old Skool",
+      slug: "vans-old-skool",
+      image: "/images/vans-old-skool.jpg",
+      banner: {
+        banner_1: "/images/nike-air-max-90-banner-1.jpg",
+        banner_2: "/images/nike-air-max-90-banner-2.jpg",
+        banner_3: "/images/nike-air-max-90-banner-3.jpg",
+      },
+      price: 70,
+      brand: "Vans",
+      description:
+        "The Vans Old Skool is a classic skate shoe that features a low-top silhouette with a suede and canvas upper. It also has the iconic Vans side stripe and a rubber waffle outsole.",
+      category: "Shoes",
+      rating: 4.0,
+      numReviews: 8,
+      inStock: 10,
+    },
+    {
+      _id: 5,
+      name: "New Balance 574",
+      slug: "new-balance-574",
+      image: "/images/new-balance-574.jpg",
+      banner: {
+        banner_1: "/images/nike-air-max-90-banner-1.jpg",
+        banner_2: "/images/nike-air-max-90-banner-2.jpg",
+        banner_3: "/images/nike-air-max-90-banner-3.jpg",
+      },
+      price: 80,
+      brand: "New Balance",
+      description:
+        "The New Balance 574 is a classic running shoe that features a suede and mesh upper with ENCAP cushioning technology. It has a retro design that is perfect for everyday wear.",
+      category: "Shoes",
+      rating: 4.0,
+      numReviews: 8,
+      inStock: 10,
+    }
   ],
 };
 

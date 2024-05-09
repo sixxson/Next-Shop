@@ -4,6 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function ProductItem({ product }: { product: Product }) {
+
+
+
     return (
         <div className='card bg-base-300 shadow-xl mb-4'>
             <figure>
@@ -11,8 +14,8 @@ export default function ProductItem({ product }: { product: Product }) {
                     <Image
                         src={product.image}
                         alt={product.name}
-                        width={300}
-                        height={300}
+                        width={150}
+                        height={150}
                         className='object-cover w-full h-48 sm:h-64'
                     />
                 </Link>
@@ -25,7 +28,6 @@ export default function ProductItem({ product }: { product: Product }) {
                 <p className='mb-2'>{product.brand}</p>
                 <div className="card-actions flex items-center justify-between">
                     <span className="text-2xl">$ {product.price}</span>
-                    <button className='btn btn-primary rounded-md'>Add Cart</button>
                 </div>
             </div>
         </div>

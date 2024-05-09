@@ -3,7 +3,7 @@ export type Product = {
   name: string;
   slug: string;
   image: string;
-  banner: [
+  banner?: [
     banner_1: string,
     banner_2: string,
     banner_3: string,
@@ -17,7 +17,8 @@ export type Product = {
   rating: number;
   numReviews: number;
   inStock: number;
-  sizes?: [// size_1?: string,
+  sizes?: [
+    // size_1?: string,
     // size_2?: string,
     // size_3?: string,
     // size_4?: string,
@@ -28,12 +29,6 @@ export type Product = {
     // size_9?: string,
     // size_10?: string,
     // size_11?: string,
-    // size_12?: string,
-    // size_13?: string,
-    // size_14?: string,
-    // size_15?: string,
-    // size_16?: string,
-    // size_17?: string
   ];
   colos?: [// colos_1?: string,
     // colos_2?: string,

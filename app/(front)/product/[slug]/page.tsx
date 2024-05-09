@@ -1,4 +1,4 @@
-import ProductItem from '@/components/products/ProductItem'
+import AddToCart from '@/components/products/AddtoCart'
 import data from '@/lib/data'
 import { ShoppingBag, ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
@@ -16,11 +16,11 @@ export default function ProductDetails({
     }
 
     return (
-        <>
+        <div className=' mx-auto'>
             <div className='my-2'>
-                <Link href='/'>asdlujaoklsdj</Link>
+                <Link href='/'>Back to Home</Link>
             </div>
-            <div className="grid md:grid-cols-4 md:gap-3">
+            <div className="grid md:grid-cols-3 md:gap-3">
                 <div className="md:grid-span-2">
                     <Image
                         src={product.image}
@@ -48,22 +48,11 @@ export default function ProductDetails({
                         <li>
                             {product.brand}
                         </li>
-                        <li>
 
-                        </li>
-                        <li>
-                            <div className="divider"></div>
-                        </li>
-                        <li>
-                            Desciption:
-                            <p>
-                                {product.description}
-                            </p>
-                        </li>
                     </ul>
                 </div>
                 <div>
-                    <div className="card bg-base-300 shadow-xl mt-3 md:mt-0">
+                    <div className="card bg-base-300 shadow-xl mt-3 md:mt-0 ">
                         <div className="card-body">
                             <div className='mb-2 flex justify-between'>
                                 <div>Price</div>
@@ -75,18 +64,39 @@ export default function ProductDetails({
                                 </div>
                                 <div>
                                     {product.inStock > 0 ? 'In Stock' : 'Out of Stock'}
+                                </div> m
+                            </div>
+                            <div className="">
+                                <h1 className='font-bold text-base-content'>Sizes:</h1>
+                                <div className="gird md:grid-cols-4 md:gap-5">
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>6</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>6.5</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>7</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>7.5</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>8</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>8.5</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>9</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>9.5</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>10</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>10.5</button>
+                                    <button className='btn hover:border-violet-50 outline-2 border-white rounded-xl px-8 mt-4 mx-1 min-w-[95px] focus:outline-none focus:border-sky-500 '>11</button>
+
                                 </div>
                             </div>
                             <div className="mb-2 flex flex-col">
-                                <button className='btn btn-primary rounded-md my-2'><ShoppingCart /> Add Cart</button>
-                                <button className='btn btn-success rounded-md '><ShoppingBag />  Buy now</button>
+                                {product.inStock != 0 && (
+                                    <div className="card-actions justify-center">
+                                        <AddToCart
+                                            item={{ ...product, qty: 0, color: '', size: '' }} />
+                                    </div>
+                                )}
+                                <button className='btn btn-success rounded-md my-2'><ShoppingBag />  Buy now</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="divider"></div>
-
             <div className='card shadow-xl mb-4'>
                 <div>
                     <h1 className='text-2xl'>
@@ -99,6 +109,6 @@ export default function ProductDetails({
                 </div>
 
             </div>
-        </>
+        </div>
     )
 }

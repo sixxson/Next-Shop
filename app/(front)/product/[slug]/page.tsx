@@ -88,6 +88,7 @@ export default function ProductDetails({
                                     <div className="card-actions justify-center">
                                         <AddToCart
                                             item={{ ...product, qty: 0, color: '', size: '' }} />
+
                                     </div>
                                 )}
                                 <button className='btn btn-success rounded-md my-2'><ShoppingBag />  Buy now</button>

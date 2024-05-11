@@ -21,7 +21,15 @@ export default function AddToCart({ item }: { item: OrtherItems }) {
     }
 
     return existItem ? (
-        <div>
+        < button type="button" className="btn btn-primary w-full " onClick={addtoCartHandler} > Add To Cart</ button>
+    ) : (
+        <button type="button" className="btn btn-primary w-full " onClick={addtoCartHandler}>Add To Cart</button>
+    )
+}
+
+
+{/*
+            <div>
             <button type="button" className="btn" onClick={() => decrease(existItem)} >
                 -
             </button>
@@ -29,8 +37,5 @@ export default function AddToCart({ item }: { item: OrtherItems }) {
             <button type="button" className="btn " onClick={() => increase(existItem)}>
                 +
             </button>
-        </div>
-    ) : (
-        <button type="button" className="btn btn-primary w-full " onClick={addtoCartHandler}>Add To Cart</button>
-    )
-}
+                </div>
+             */}

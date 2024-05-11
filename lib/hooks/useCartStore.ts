@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { round2 } from '../utils';
 import { OrtherItems } from '../models/OrtherModel';
+import { persist } from 'zustand/middleware';
 
 type Cart = {
     items: OrtherItems[];
@@ -18,7 +19,11 @@ const initialState: Cart = {
     totalPrice: 0,
 };
 
-export const cartStore = create<Cart>(() => initialState);
+export const cartStore = create<Cart>()( // Create cart store with Zustand and persist data to local storage 
+    persist(() => initialState, {
+        name: 'cartStore'
+    })
+);
 
 export default function useCartService() {
     const { items, itemsPrice, taxPrice, shippingPrice, totalPrice } = cartStore();

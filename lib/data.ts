@@ -1,12 +1,28 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "John Doe",
+      email: "admin@admin.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: true,
+    },
+    {
+      name: "Jane Doe",
+      email: "user@user.com",
+      password: bcrypt.hashSync("654321"),
+      isAdmin: false,
+    }
+  ],
   products: [
     {
-      _id: 1,
+
       name: "Nike Air Max 90",
       slug: "nike-air-max-90",
       image: "/images/nike-air-max-90.jpg",
       banner: {
-        banner_1: "/images/nike-air-max-90-banner-1.jpg",
+        banner_1: "/images2/nike-air-max-90-banner-1.jpg",
         banner_2: "/images/nike-air-max-90-banner-2.jpg",
         banner_3: "/images/nike-air-max-90-banner-3.jpg",
       },
@@ -20,7 +36,7 @@ const data = {
       inStock: 10,
     },
     {
-      _id: 2,
+
       name: "Adidas Superstar",
       slug: "adidas-superstar",
       image: "/images/adidas-superstar.jpg",
@@ -39,7 +55,7 @@ const data = {
       inStock: 10,
     },
     {
-      _id: 3,
+
       name: "Converse Chuck Taylor All Star",
       slug: "converse-chuck-taylor-all-star",
       image: "/images/converse-chuck-taylor-all-star-1.jpg",
@@ -58,7 +74,7 @@ const data = {
       inStock: 10,
     },
     {
-      _id: 4,
+
       name: "Vans Old Skool",
       slug: "vans-old-skool",
       image: "/images/vans-old-skool.jpg",
@@ -77,7 +93,7 @@ const data = {
       inStock: 10,
     },
     {
-      _id: 5,
+
       name: "New Balance 574",
       slug: "new-balance-574",
       image: "/images/new-balance-574.jpg",

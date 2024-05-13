@@ -2,6 +2,7 @@ import { Product } from '@/lib/models/ProductModels'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import AddToCart from './AddtoCart'
 
 export default function ProductItem({ product }: { product: Product }) {
 
@@ -28,6 +29,8 @@ export default function ProductItem({ product }: { product: Product }) {
                 <p className='mb-2'>{product.brand}</p>
                 <div className="card-actions flex items-center justify-between">
                     <span className="text-2xl">$ {product.price}</span>
+                    <AddToCart
+                        item={{ ...product, qty: 0, color: '', size: '' }} />
                 </div>
             </div>
         </div>
